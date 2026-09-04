@@ -4,6 +4,6 @@ int main()
 {
     string str = "Strong";
     str[0] = 'V';
-    cout << str;
+    cout << str; // Strings are mutable
     return 0;
 }

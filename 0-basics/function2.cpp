@@ -43,8 +43,8 @@ int main(){
     int num1;
     cin >> num1; 
     
-    calculation(num1);
-    cout << num1;
+    calculation(num1);  // --> pass by reference, address of num is passed
+    cout << num1;  // --> Original value is changed
 
     return 0;
 }

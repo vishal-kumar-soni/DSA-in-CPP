@@ -8,8 +8,7 @@ int main()
     cout << "The input is";
     cin >> a;
 
-    switch (a)
-    {
+    switch (a){
     case 1:
         cout << "a is printed";
         break;
