@@ -1,5 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+int power(int a, int b){
+    int ans=1;
+    for(int i=0;i<b;i++){
+       ans*=a;
+    }
+
+    return ans;
+}
+
 bool isArmstrong(int num){
 
     int original = num;
@@ -14,10 +24,7 @@ bool isArmstrong(int num){
     while (num > 0){  //TC O(log n)
         int power=1;
         int last=num%10;
-        for(int i=0;i<digits;i++){
-            power=power*last;
-        }
-        ans=ans+power;
+        ans=ans+power(last, digits);
         num=num/10;
     }
      

@@ -14,10 +14,13 @@ int conversion(string str){
 
 int main(){
 
-    string str;
-    getline(cin, str);
+    // string str;
+    // getline(cin, str);
 
-    int ans = conversion(str);
-    cout<<ans;
+    // int ans = conversion(str);
+    // cout<<ans;
+
+    cout<<1/10;
+    cout<<1%10;
     return 0;
 }
