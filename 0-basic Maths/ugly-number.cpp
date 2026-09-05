@@ -1,3 +1,5 @@
+// An ugly number is a positive integer whose only prime factors are limited to 2, 3, and 5
+
 #include <bits/stdc++.h>
 using namespace std;
 
