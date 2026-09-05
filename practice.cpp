@@ -1,44 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int power(int a, int b){
-  int ans=1;
-   for(int i=0;i<b;i++){
-     ans*=a;
-   }
-
-   return ans;
+bool isPrime(int x){
+    for(int i=2;i<=sqrt(x);i++){
+        if(x%i==0) return false;
+    }
+   return true;
 }
 
-bool isArmstrong(int n ){
-  int ori = n;
 
-  int digit = 0;
-  while(n>0){
-    n=n/10;
-    digit++;
-  }
-
-  n=ori;
-  int res = 0;
-  while(n>0){
-    int lastDigit = n%10;
-    res = res+power(lastDigit, digit);
-    n=n/10;
-    cout<<res<<endl;
-  }
-
-  cout<< res<<endl;
-
-  if(res==ori)return true;
-  else return false;
+bool ugly(int a ){ 
+    for(int i=2;i<=a;i++){
+        if(a%i==0){
+            if(isPrime(i) ){
+                if(i!=2 && i!=3 && i!=5) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
 }
 
 int main(){
-  int n ;
-  cout<<"enter the number: ";
-  cin>>n;
+    int a ;
+    cout<<"Enter 1st number: ";
+    cin>>a;
 
-  cout<< isArmstrong(n);
-  return 0;
-} 
+    cout<<ugly(a);
+    return 0;
+}

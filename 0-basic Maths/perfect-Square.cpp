@@ -2,16 +2,14 @@
 using namespace std;
 
 bool isPerfectSquare(int N) {
-   if (N < 0) {
-        return 0;
+    if (N < 0) {
+      return 0;
     }
 
     int root = sqrt(N);
 
-    if (root * root == N)
-      return 1;
-    else
-       return 0;
+    if (root * root == N) return 1;
+    else return 0;
 
 }
 

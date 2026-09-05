@@ -20,5 +20,5 @@ void factors(int num){
 }
 int main(){
     factors(36);  
-    return 0;
+    return 0; 
 }

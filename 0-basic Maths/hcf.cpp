@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 vector<int> factors(int x){
     vector <int> vec;
     for(int i=1;i<=sqrt(x);i++){
@@ -12,6 +13,7 @@ vector<int> factors(int x){
     }
     return vec;
 }
+
 int findHCF(int a , int b){
   
     vector<int> f = factors(a);
