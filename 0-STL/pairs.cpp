@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    //  we can assign two or more values in a single variable
+    // We can assign two or more values of same or different data types in a single variable 
     // using pair
 
     pair<int, int> p={1,2};
-    // cout<<p.second;
+    // cout<<p.first; -> 1
+    // cout<<p.second; -> 2
 
     pair <int, pair<int,int>> r={12,{10,20}};
     // cout<<r.second.first;

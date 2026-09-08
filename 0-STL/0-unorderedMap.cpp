@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    unordered_map<int,int> um; // stores unique key unorderdly
+    unordered_map<int,int> um; // Stores unique key unorderdly
 
     um.insert({2,4});
     um.emplace(2,4);

@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main(){
 
     int a;
-    cout << "The input is";
+    cout << "The input is: ";
     cin >> a;
 
     switch (a){
@@ -24,4 +23,6 @@ int main()
     default:
         cout << "nothing";
     }
-}
+
+    return 0;
+};
