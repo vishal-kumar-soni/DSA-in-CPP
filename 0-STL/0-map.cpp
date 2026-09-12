@@ -30,8 +30,11 @@ int main(){
     
     cout<< "the size of map is " << mp.size() <<endl; // size() method is used to find the size of map.
     
-    mpp.delete();// issue
-    if(mp.find("bottle") != mp.end()){
+    mpp.clear(); // Delete entire map
+
+    mpp.empty(); // empty() is used to find out that whether map is empty or not.
+
+    if(mp.find("bottle") != mp.end()){ // mp.end() returns an iterator representing the position just after the last element.
         cout<<"Bottle is present\n";
     }else{
         cout<< "Bottle is not present\n";

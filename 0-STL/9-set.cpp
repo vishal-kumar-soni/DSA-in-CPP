@@ -2,6 +2,8 @@
 using namespace std;
 int main(){
 
+// Set - A set stores unique elements in sorted order.
+
 //===================================================================//
    
    //---------- creation  of set----------//
@@ -27,7 +29,7 @@ int main(){
 
     //--------- Deletion of set---------//
 
-    st.erase(30); // --> Delete 30 and maintain the sorted order,but takes logarithmic time
+    st.erase(30); // --> Delete 30 and maintain the sorted order,but takes logarithmic time O(log n)
 
     // This takes constant time complexity
     auto val = st.find(30);

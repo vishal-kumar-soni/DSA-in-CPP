@@ -3,6 +3,8 @@ using namespace std;
 int main()
 {
 
+//   Multiset - multiset allows duplicate elements.
+
     //===================================================================//
 
     //---------- creation  of multiset----------//
