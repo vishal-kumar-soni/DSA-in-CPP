@@ -1,16 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-
 int main(){
-   multiset <int> st= {10, 20, 30, 10};
+    vector<int> arr(5);
+    for(int i = 0;i<5;i++){
+        cout<<"Enter "<<i<<"th number: ";
+        cin>>arr[i];
+    }
 
-   for(int i: st){
-    cout<<i<<endl;
-   }
-  
+    cout<<"\n Printing the values\n";
 
+    for(int i=0;i<arr.size();i++){
+        cout<<arr[i]<<' ';
+    }
  
     return 0;
 }
