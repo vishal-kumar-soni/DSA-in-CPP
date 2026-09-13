@@ -29,5 +29,11 @@ int main(){
     for (auto i : vec){
         cout << i << " ";
     }
+
+    //---------- Min and max element in a vector ------------------//
+
+    int maxVal = *max_element(v.begin(), v.end());
+    int minVal = *min_element(v.begin(), v.end());
+    
     return 0;
 }
