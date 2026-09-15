@@ -3,7 +3,7 @@ using namespace std;
 
 int countNumber(vector<int>&arr , int a , int b){
    int start = -1;
-    for(int  i =0;i<arr.size();i++){
+    for(int  i =0;i<arr.size();i++){ // TC = O(n)
         if(arr[i]==a){
             start= i;
             break;
@@ -11,7 +11,7 @@ int countNumber(vector<int>&arr , int a , int b){
     }
 
    int end = -1;
-    for(int  i = arr.size();i>=0;i--){
+    for(int  i = arr.size();i>=0;i--){// TC= O(n)
         if(arr[i]==b){
             end= i;
             break;
@@ -31,3 +31,6 @@ int main(){
 
     return 0;
 }
+
+// TC=O(n)
+// SC=O(1)

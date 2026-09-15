@@ -1,7 +1,6 @@
-// Given an array of positive integers. This function returns all the
-// leaders in the array. An element is considered a leader if it is
-// greater than or equal to all elements to its right. The rightmost element
-// is always a leader.
+// Given an array of positive integers. This function returns all the leaders in the array. An
+// element is considered a leader if it is greater than or equal to all elements to its right. The
+// rightmost element is always a leader.
 
 
 #include<iostream>
@@ -11,15 +10,16 @@ using namespace std;
 
 vector<int> findUnique(vector<int>&arr ){
     int lastMax=0;
-    list<int> li;
-    vector<int> ans;
-    for(int i=arr.size()-1;i>=0;i--){
+    list<int> li; // SC=O(n)
+    vector<int> ans; // SC=O(n)
+
+    for(int i=arr.size()-1;i>=0;i--){ // TC=O(n)
         if(arr[i]>=lastMax){
            li.push_front(arr[i]);
            lastMax=arr[i];
         }
     }
-    for(auto it:li){
+    for(auto it:li){ // TC=O(n)
         ans.push_back(it); 
     }
     return ans;
@@ -35,3 +35,6 @@ int main(){
    
     return 0;
 }
+
+// TC=O(n)
+// SC=O(n)
