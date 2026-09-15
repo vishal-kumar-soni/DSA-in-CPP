@@ -1,22 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    vector<int> arr = {1,5,3,4,3,5,6};
-    unordered_map<int, int> mp;
+int binarySearch(vector<int>&arr,int target){
+    int i=0;
+    int j = arr.size();
 
-    for(int i = 0;i<arr.size();i++){
-        int res = -1;
-        if(mp.find(arr[i])!=mp.end()){
-            mp[arr[i]]++;
-        }else{
-            mp.insert({arr[i],1});
+    while(i<=j){
+        int mid = (i+j)/2;
+            
+        if(target==arr[mid]) return mid;
+
+        if(arr[mid]>target){
+            j=mid;
+        }else if(arr[mid]<target){
+            i=mid;
         }
     }
+    return -1;
+}
 
-    for(auto i:mp){
-       cout<< i.first <<" - " << i.second<< endl;
-    }
+int main(){
+       vector<int> arr={2,5,7,8,11,13,19};  
+    int target = 9;
+    int res = binarySearch(arr, target);
+    cout<<res;
    
     return 0;
 }
