@@ -2,9 +2,9 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>&arr, int target){
-    vector<int> res;
-    for(int i =0;i<arr.size();i++){
-        for(int j=i+1;j<arr.size();j++){
+    vector<int> res; //SC=O(1)
+    for(int i =0;i<arr.size();i++){ // TC=O(n)
+        for(int j=i+1;j<arr.size();j++){ //TC=O(n)
             if(arr[i]+arr[j]==target){
                res.push_back(i);
                res.push_back(j);
@@ -26,3 +26,6 @@ int main(){
     }
     return 0;
 }
+
+// TC=O(n*n)
+// SC=O(1)
