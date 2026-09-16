@@ -5,7 +5,7 @@
 using namespace std;
 
 vector<int> Duplicate(vector<int>&arr){
-    vector<int> res; //TC=O(n/2)
+    vector<int> res; //SC=O(n/2)
     for(int i =0;i<arr.size();i++){//TC=O(n)
         int lastInserted = -1;
         for(int j =i+1;j<arr.size();j++){ //TC=O(n)
