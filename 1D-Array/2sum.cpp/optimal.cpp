@@ -1,32 +1,33 @@
-#include<iostream>
-#include<vector>
-#include<unordered_map>
+#include<bits/stdc++.h>
 using namespace std;
 
-vector<int> twoSum(vector<int>&arr, int target ){
-    unordered_map <int,int> mpp;
-    vector<int> ans;
-    for(int i=0;i<arr.size();i++){
-        int diff = target - arr[i];
-
-        if(mpp.find(diff)==mpp.end()){ // !map.has(diff)
-            mpp[arr[i]]=i;
-           
-        }else{
-            return {mpp[diff], i};
+vector<int> twoSum(vector<int>&arr, int target){
+    unordered_map<int, int> map; // SC=O(n)
+    int i=0;
+    while(i<arr.size()){ //TC=O(n)
+        int diff = target-arr[i];
+        if(map.count(diff)){
+            return {map[diff], i};
         }
+        
+        map[arr[i]]=i;
+        i++;
+        
     }
-  
+    return {};
 }
 
 int main(){
-    vector<int> arr={3,1,2,5,0,6};
-    int target=7;
-
+    vector<int> arr = {3,6,5,1,10};
+    int target = 16;
+    
     vector<int> res = twoSum(arr, target);
+
     for(auto it:res){
-        cout<<it<< " ";
+        cout<<it<<" ";
     }
-   
     return 0;
 }
+
+// TC=O(n)
+// SC=O(n)
