@@ -1,40 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> twoSum(vector<int>&arr, int target){
-    unordered_map<int, int> map; // SC=O(n)
-    int i=0;
-    while(i<arr.size()){ //TC=O(n)
-        int diff = target-arr[i];
-        if(map.find(diff)!=map.end()){
-            return {map[diff], i};
+int twoSum(vector<int>&arr){
+    int maxSum = INT_MIN;
+    int currSum= 0;
+    for(int i =0;i<arr.size();i++){
+        currSum = currSum+arr[i];
+        maxSum= max(maxSum, currSum);
+        if(currSum<0){
+            currSum= 0;
         }
-        
-        map[arr[i]]=i;
-        i++;
-        
     }
-    return {};
+    return maxSum;
 }
 
 int main(){
-    vector<int> arr = {3,6,5,1,10};
-    int target = 16;
+    vector<int> arr = {-4, 4, -1, 4, 3};
     
-    // vector<int> res = twoSum(arr, target);
+   cout<< twoSum(arr);
 
-    // for(auto it:res){
-    //     cout<<it<<" ";
-    // }
-
-    unordered_map<int, int> mp;  
-    mp[5]=5;
-    mp[1]=10;
-    mp[20]=200;
-    mp[15]=150;
-    mp[12]=120; 
-
-    cout<<mp.contains(1);
+    
     return 0;
 }
 
