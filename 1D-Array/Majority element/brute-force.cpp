@@ -10,14 +10,14 @@ using namespace std;
 
 int majority(vector<int>&arr){
 
-    int arrLength = arr.size()/2;
+    int arrLength = arr.size();
    
     for(int i =0;i<arr.size();i++){ // TC=O(n/2)
         int count = 0;
         for(int j = 0;j<arr.size();j++){ //TC=O(n)
             if(arr[i]==arr[j]) count++;
         }
-        if(count>arrLength){
+        if(count>arrLength/2){
             return arr[i];
         }
     }
