@@ -1,6 +1,5 @@
 // Leetcode 169 
 
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -38,4 +37,4 @@ int main(){
 }
 
 // TC=O(n)
-// SC=O(1)
+// SC=O(1)  
