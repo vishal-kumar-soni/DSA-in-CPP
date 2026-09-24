@@ -12,7 +12,6 @@ vector<int> moveToEnd(vector<int>&arr){
     }
 
     return tempArr;
-
 }
 
 int main(){
