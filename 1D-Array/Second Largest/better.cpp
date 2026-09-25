@@ -1,15 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int twoSum(vector<int>&arr){
+int secondLargest(vector<int>&arr){
 
     int large = arr[0];
-    for(int i=0;i<arr.size();i++){
+    for(int i=0;i<arr.size();i++){ //TC=O(n)
         if(arr[i]>large) large = arr[i];
     }
     
     int secondLarge = INT_MIN;
-    for(int i=0;i<arr.size();i++){
+    for(int i=0;i<arr.size();i++){ //TC=O(n)
         if(arr[i]>secondLarge && arr[i]!=large) secondLarge = arr[i];
     }
    
@@ -20,13 +20,7 @@ int twoSum(vector<int>&arr){
 int main(){
     vector<int> arr = {3, 4, 5, 6, 31, 31}; // 6
 
-    cout<<twoSum(arr);
-
-    // vector<int> res = twoSum(arr, k);
-
-    // for(auto it:res){
-    //     cout<<it<<" ";
-    // }
+    cout<<secondLargest(arr);
    
     return 0;
 }
