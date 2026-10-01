@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int twoSum(vector<int>&arr, int k){
+int subArraySum(vector<int>&arr, int k){
     int sum = 0;
     int largest = INT_MIN;
     int i =0;
@@ -22,18 +22,12 @@ int twoSum(vector<int>&arr, int k){
 }
 
 int main(){
-    vector<int> arr = {-2,3,-5,6,4,3,4,6,-4,3,3,-4,0};
+    vector<int> arr = {-2,3,-5,6,4,3,4,6,-4,3,3,-4,0}; //13
     int k =3;
-    cout<<twoSum(arr, k);
+    cout<<subArraySum(arr, k);
 
-    // vector<int> res = twoSum(a, b);
-
-    // for(auto it:res){
-    //     cout<<it<<" ";
-    // }
-   
     return 0;
 }
 
-// TC=O(m+n*log(m+n))
-// SC=O(m+n)
+// TC=O(n))
+// SC=O(1)
