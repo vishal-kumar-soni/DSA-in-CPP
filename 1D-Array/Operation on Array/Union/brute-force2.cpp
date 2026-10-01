@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> twoSum(vector<int>&a, vector<int>&b){
+vector<int> Union(vector<int>&a, vector<int>&b){
     map<int, int> map; // SC=O(m+n)
     vector<int> res; //SC=O(m+n)
 
@@ -33,7 +33,7 @@ int main(){
     vector<int> a = {5,3,1,1,4,3};
     vector<int> b = {6,3,5,3};
 
-    vector<int> res = twoSum(a, b);
+    vector<int> res = Union(a, b);
 
     for(auto it:res){
         cout<<it<<" ";
