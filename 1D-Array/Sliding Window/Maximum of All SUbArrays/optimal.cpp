@@ -2,19 +2,18 @@
 using namespace std;
 
 // Maximum of all sub array
-vector<int> twoSum(vector<int>&arr, int k){
-    vector<int> res;
+vector<int> MaximumSubArray(vector<int>&arr, int k){
+    vector<int> res; //SC=O(n)
     int large = arr[0];
     int secondLarge = INT_MIN;
     
     int i =0;
     int j =0;
-    while(j<arr.size()){
-    //    large = arr[j];
+    while(j<arr.size()){ // TC=O(n)
 
         while(j<k){
             if(arr[j]>large){
-                secondLarge = large ;
+                secondLarge = large;
                 large = arr[j];
             }else if(arr[j]>secondLarge && arr[j]!=large){
                 secondLarge = arr[j];
@@ -40,8 +39,6 @@ vector<int> twoSum(vector<int>&arr, int k){
                 if(arr[i]==large){
                     large = secondLarge;
                 }
-                i++;
-                j++;
             }else{
                 secondLarge = large;
                 large = arr[j];
@@ -49,20 +46,20 @@ vector<int> twoSum(vector<int>&arr, int k){
                 if(arr[i]==large){
                    large = secondLarge;
                 }
-                i++;
-                j++;
+
             }
+            i++;
+            j++;
         }
     }
     return res;
 }
 
 int main(){
-    vector<int> arr = {120, -1, 17, 8, -16, 20, 23, 1};  
+    vector<int> arr = {120, -1, 17, 8, -16, 20, 23, 1}; //120 17 17 20 23 23  
     int k =3;
-    // cout<<twoSum(arr);
 
-    vector<int> res = twoSum(arr, k);
+    vector<int> res = MaximumSubArray(arr, k);
 
     for(auto it:res){
         cout<<it<<" ";
@@ -71,5 +68,5 @@ int main(){
     return 0;
 }
 
-// TC=O(m+n*log(m+n))
-// SC=O(m+n)
+// TC=O(n)
+// SC=O(n)
