@@ -19,8 +19,8 @@ vector<int> Intersection(vector<int>&a, vector<int>&b){
 }
 
 int main(){
-    vector<int> a = {1,2,3,4,45,57}; 
-    vector<int> b = {1,2,3,4,45,57};
+    vector<int> a = {1,2,2,4,45,57}; 
+    vector<int> b = {1,2,2,4,45,57};
 
     vector<int> res = Intersection(a, b);
 
