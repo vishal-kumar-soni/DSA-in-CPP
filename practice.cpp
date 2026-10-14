@@ -1,44 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Maximum of all sub array
-int twoSum(vector<int>&arr){
-    long long secondLarge = LLONG_MIN;
-    long long thirdLarge = LLONG_MIN;
-    int large = arr[0];
+int calculate(vector<vector<int>>&arr){
 
-    int i =0;
-    while(i<arr.size()){ // TC=O(n)
-        if(arr[i]>large){
-            thirdLarge = secondLarge;
-            secondLarge = large;
-            large = arr[i];
+   int n = arr.size();
+   int d1 = 0;
+   int d2 = 0;
+
+    for(int i =0;i<arr.size();i++){
+        for(int j=0;j<arr.size();j++){
+            if(i==j) d1+=arr[i][j];
+            if(i+j==n-1) d2+=arr[i][j];
         }
-        if(arr[i]>secondLarge && arr[i]!=large){
-            thirdLarge = secondLarge;
-            secondLarge = arr[i];
-        }
-        if(arr[i]>thirdLarge && arr[i]!=large && arr[i]!=secondLarge){
-            thirdLarge = arr[i];
-        }
-        i++;
     }
-    if(thirdLarge == LLONG_MIN) return large;
-    else return thirdLarge;
+
+    return (d2-d1);
 }
 
 int main(){
-    vector<int> arr = {1,2,-2147483648};  
-    cout<<twoSum(arr);
+    vector<vector<int>> arr = {{1,2,3,4},{15,6,27,28},{9,10,11,12},{13,14,15,16}}; 
 
-    // vector<int> res = twoSum(arr, k);
+    cout<<calculate(arr);
 
-    // for(auto it:res){
-    //     cout<<it<<" ";
-    // }
-   
     return 0;
 }
-
-// TC=O(n)
-// SC=O(1)
