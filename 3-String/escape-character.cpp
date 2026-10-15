@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 
-    // "The "C++" peogramming"
+    // "The "C++" programming"
     string str = "The \"C++\" programming";
     cout<<str<<endl;
    

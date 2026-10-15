@@ -1,10 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    char arr[10] = {'a','p','p','l','e'};
+    vector<char> vec = {'A','P','P','L'};
+    cout<<vec.size()<<endl;
+
+    char arr[] = {'a','p','p','l','e'};
     cout<<sizeof(arr)/sizeof(arr[0])<<endl;
 
-    for(int i=0;i<10;i++){
+    for(int i=0;i<5;i++){
         cout<<arr[i]<<" ";
     }
 

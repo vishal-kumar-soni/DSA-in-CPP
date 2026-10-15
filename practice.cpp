@@ -1,26 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int calculate(vector<vector<int>>&arr){
-
-   int n = arr.size();
-   int d1 = 0;
-   int d2 = 0;
-
-    for(int i =0;i<arr.size();i++){
-        for(int j=0;j<arr.size();j++){
-            if(i==j) d1+=arr[i][j];
-            if(i+j==n-1) d2+=arr[i][j];
+char calculate(string s){
+    unordered_map<char, int> map;
+    for(char ch:s){
+        if(map.count(ch)){
+            return ch;
+        }else{
+            map.emplace(ch, 1);
         }
     }
-
-    return (d2-d1);
+    return -1;
 }
 
 int main(){
-    vector<vector<int>> arr = {{1,2,3,4},{15,6,27,28},{9,10,11,12},{13,14,15,16}}; 
+    
+    string s = "ax";
 
-    cout<<calculate(arr);
+
+    cout<<calculate(s);
 
     return 0;
 }

@@ -7,7 +7,7 @@ int main(){
     // But
     
     string str2;
-    cout<<"enter the string - ";
+    cout<<"Enter the string - ";
     getline(cin,str2);
 
     cout<<str2;
