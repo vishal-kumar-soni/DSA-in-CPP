@@ -22,7 +22,8 @@ string displayLongest(vector<string>&arr){
 }
 
 int main(){
-    vector<string> arr = {"Geek", "Geeks", "Geeksfor", "GeeksforGeek", "GeeksforGeeks","qqqqqqqqqqqqq"};
+    vector<string> arr = {"Geek", "Geeks", "Geeksfor", "GeeksforGeek", "GeeksforGeeks",
+    "qqqqqqqqqqqqq"};
 
     string ans = displayLongest(arr);
     cout<<ans;

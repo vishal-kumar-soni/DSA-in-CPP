@@ -21,7 +21,7 @@ char getMaxOccuringChar(string &str){
 }
 
 int main(){
-    string str = "oaarqxxvbq";
+    string str = "oaaarqxxvbq";
 
     cout << "The char is " << getMaxOccuringChar(str) << endl;
     

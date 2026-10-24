@@ -15,10 +15,11 @@ char calculate(string s){
 
 int main(){
     
-    string s = "ax";
+    string s = "axe";
+    char b = 'a';
 
-
-    cout<<calculate(s);
-
+    // cout<<calculate(s);
+    char newo = toupper(b);
+    cout<<newo;
     return 0;
 }
