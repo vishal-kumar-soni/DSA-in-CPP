@@ -1,30 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-char calculate(string s){
+bool Anagram(string str1,string str2){
+    if(str1.size()!=str2.size()) return false;
+
     unordered_map<char, int> map;
-    for(char ch:s){
-        if(map.count(ch)){
-            return ch;
-        }else{
-            map.emplace(ch, 1);
-        }
+    for(int i=0;i<str1.size();i++){
+        map[str1[i]]++;
     }
-    return -1;
+
+    for(int i=0;i<str2.size();i++){
+        if(map.count(str2[i])){
+            map[str2[i]]--;
+        }else{
+            return false;
+        }
+        if(map[str2[i]]<0) return false;
+    }
+
+    return true;
 }
 
 int main(){
-    
-    string s = "axe";
-    char b = 'a';
+     
+    string str1 = "bc";
+    string str2 = "ad";
 
-    string st;
-    st.push_back(b);
-    st.push_back('s');
-    cout<<st;
+    cout << Anagram(str1, str2);
 
-    // cout<<calculate(s);
-    // char newo = toupper(b);
-    // cout<<newo;
     return 0;
 }
