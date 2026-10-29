@@ -18,8 +18,13 @@ int main(){
     string s = "axe";
     char b = 'a';
 
+    string st;
+    st.push_back(b);
+    st.push_back('s');
+    cout<<st;
+
     // cout<<calculate(s);
-    char newo = toupper(b);
-    cout<<newo;
+    // char newo = toupper(b);
+    // cout<<newo;
     return 0;
 }
