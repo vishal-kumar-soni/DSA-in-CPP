@@ -18,12 +18,12 @@ string remaining(string str, char ch, int count){
         }
 
         if(cnt==count){
-            i++;
-            while(i<str.size()){
-                res+=str[i];
-                i++;
+            int j=i+1;
+            while(j<str.size()){
+               res.push_back(str[j]);
+               j++;
             }
-            break;
+            return res;
         }
     }
     return res;

@@ -21,7 +21,7 @@ int minimumIdx(string &str1, string &str2){
 
 int main(){
     string str1 = "duxwfnfo";
-    string str2 = "wfn"; // output: 0
+    string str2 = "wfn"; // output: 3
 
     cout<<minimumIdx(str1,str2);
 

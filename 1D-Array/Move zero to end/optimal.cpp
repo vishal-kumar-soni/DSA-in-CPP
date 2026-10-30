@@ -11,7 +11,7 @@ vector<int> moveToEnd(vector<int>&arr){
     }
     if(zero == -1) return arr;
 
-    for(int i=0;i<arr.size();i++){  //TC=O(n)
+    for(int i=0;i<arr.size();i++){  //TC=O(n)it.second%2==0
         if(i>zero && arr[i]>0){
            swap(arr[i],arr[zero]);
            zero++;

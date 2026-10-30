@@ -28,7 +28,7 @@ bool isPalindrome(string &str){
 }
 
 int main(){
-    string str = "OP";
+    string str = "OPo";
 
     cout<<isPalindrome(str);
 

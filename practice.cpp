@@ -1,29 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-string removeChars(string str1, string str2){
-    unordered_map<char, int> map;
+int longestPalindrome(string str){
+   unordered_map<char, int> map;
 
-    for(int i=0;i<str2.size();i++){
-        map[str2[i]]++;
+    for(int i=0;i<str.size();i++){
+       map[str[i]]++;
     }
 
-    for(int i=0;i<str1.size();i++){
-        if(map.count(str1[i])){
-            str1.erase(i, 1);
-            i--;
+    int count = 0;
+    bool mid = true;
+    for(auto it: map){
+        if(it.second%2==0){
+            count+=it.second;
+        }else if((it.second%2!=0) && mid){
+            count+=it.second;
+            mid = false;
         }
     }
-
-    return str1;
+    return count;
 }
 
 int main(){
      
-    string str1 = "computer";
-    string str2 = "cat";
+    string str = "aabbcbadac";
 
-   cout<< removeChars(str1, str2);
+    cout<<longestPalindrome(str);
 
     return 0;
 }
