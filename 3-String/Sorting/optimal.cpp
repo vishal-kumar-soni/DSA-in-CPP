@@ -5,7 +5,7 @@ string sort(string str){
    map<char,int> mpp; // SC=O(n)
 
     for(int i=0;i<str.size();i++){ // TCO(n)
-        mpp[str[i]]++;
+        mpp[str[i]]++; //TC=O(logk)
     }
 
     string res =""; //SC=O(n)
@@ -29,5 +29,5 @@ int main(){
     return 0;
 }
 
-// TC= O(2n) ~ O(n)
+// TC= O(n*logk) // k = number of distinct characters in the string
 // SC= O(n)

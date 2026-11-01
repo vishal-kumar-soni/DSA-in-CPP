@@ -1,3 +1,4 @@
+// 1910
 // Given two strings s and part, perform the following operation on s until all
 // occurrences of the substring part are removed:
 
