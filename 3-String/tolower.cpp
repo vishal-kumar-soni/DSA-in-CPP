@@ -16,5 +16,9 @@ int main(){
 
     cout<<lowerCase(str);
 
+    char ch = 'G';
+    char lower = ch + ('a' - 'A');
+    cout<<lower;
+
     return 0;
 }

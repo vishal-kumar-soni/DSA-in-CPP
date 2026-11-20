@@ -16,5 +16,10 @@ int main(){
 
     cout<<upperCase(str);
 
+    char ch = 'm';
+    char upper = ch - ('a' - 'A');
+    cout<<upper;
+
+
     return 0;
 }
